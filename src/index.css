@@ -1,35 +1,10 @@
 @import 'tailwindcss';
 
 @theme {
-  /* Primary Palette */
-  --color-Primary-Soft-Lavender: #a77bca; /*Main brand color
-*/
-  --color-Primary-Glow: #d4bfed; /*Lighter lavender for glow effects
-  */
   /* gradient */
   --color-gradient-primary: #b380b3;
   --color-gradient-secondary: #e68fab;
-
-  /* Secondary & Accent */
-  --color-Secondary-Foreground: #6D6272; /*Dark gray text*/
-
-  --color-Accent-Peach: #f5c499; /* Warm peach highlights*/
-  --color-Accent-Foreground: #6b4d30; /*Dark brown text*/
-
-  /* Background & Surface */
-
-  --color-Background: #fbf9f4; /*Soft cream main background*/
-  --color-Card: #ffffff; /*White cards*/
-  --color-Foreground: #3b3640; /*Dark purple-gray text*/
-
-  /* UI Elements */
-  --color-Border: #e8e4eb; /*Light lavender borders*/
-  --color-Input: #eee9f1; /*Very light lavender inputs*/
-  --color-Muted: #f7f5f1; /*Muted cream background*/
-  --color-Muted-Foreground: #837a87; /* Gray-purple muted text*/
-
-  /* Functional */
-  --color-Destructive: #f28b8b; /*Soft coral red for delete*/
-  --color-Destructive-Foreground: #ffffff; /*White text on destructive*/
-  --color-Ring: #a77bca; /*Focus ring (same as primary)*/
+}
+.bg-gradient {
+  @apply bg-linear-to-br from-gradient-primary to-gradient-secondary;
 }
