@@ -19,7 +19,7 @@ const Input = () => {
     const intervalId = setInterval(() => {
       index = (index + 1) % placeholders.length;
       setCurrentPlaceholderText(placeholders[index]);
-    }, 50000);
+    }, 40000);
 
     return () => {
       clearInterval(intervalId);
@@ -27,9 +27,9 @@ const Input = () => {
   }, []);
 
   return (
-    <div className="flex w-[90%] p-0.5 border-gray-200 rounded-lg justify-center border-2">
-      <input type="text" className="outline-none px-3 flex-1 " placeholder={currentPlaceholderText} />
-      <button className="bg-gradient p-2 rounded-lg text-white">
+    <div className="flex w-[90%] p-0.5  border-gray-200 rounded-lg justify-center border-2 shadow-lg">
+      <input type="text" className="outline-none px-3 py-2 flex-1 " placeholder={currentPlaceholderText} />
+      <button className="bg-gradient px-3 py-2 rounded-md text-white">
         <BiPlus />
       </button>
     </div>
