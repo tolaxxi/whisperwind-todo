@@ -11,8 +11,6 @@ interface TodoPropType {
 const Todo = ({ todoText, isCompleted, id }: TodoPropType) => {
   const { setTodo } = useTodo();
 
-  console.log(isCompleted);
-
   function handleToggle() {
     setTodo((prevTodo) => {
       return prevTodo.map((t) => {

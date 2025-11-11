@@ -7,7 +7,6 @@ import EmptyTodoPage from './EmptyTodoPage';
 
 const Home = () => {
   const { todo } = useTodo();
-  console.log(todo)
   return (
     <main className="flex flex-col items-center w-full h-dvh gap-10 px-8 sm:px-25">
       <Header />
