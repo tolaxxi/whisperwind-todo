@@ -1,9 +1,17 @@
 import { BiHeart, BiStar } from 'react-icons/bi';
 import Progressbar from './Progressbar';
+import { useTodo } from '../context/todoContext/useTodo';
 
 const ProgressCard = () => {
+  const { todo } = useTodo();
+
+  // get completed number
+
+  const completedTodo = todo.filter((t) => t['isCompleted'] === true);
+  const completedTodoCount = completedTodo.length;
+
   return (
-    <section className="border-2 w-[90%] gap-6 border-gray-200 flex flex-col justify-center items-center rounded-xl shadow-md px-4 py-3">
+    <section className="border-2 w-full gap-6 border-gray-200 flex flex-col justify-center items-center rounded-xl shadow-md px-4 py-3">
       <div className="flex items-center w-full justify-between">
         <span className="flex items-center gap-3 text-lg text-gray-500">
           <BiHeart className="text-purple-400" />
@@ -11,7 +19,7 @@ const ProgressCard = () => {
         </span>
 
         <h2 className="text-lg flex items-end">
-          <span className="text-purple-400 font-medium text-2xl">0</span>/0
+          <span className="text-purple-400 font-medium text-2xl">{completedTodoCount}</span>/{todo.length}
         </h2>
       </div>
       {/* progress bar */}
