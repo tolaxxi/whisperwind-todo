@@ -29,7 +29,7 @@ const Todo = ({ todoText, isCompleted, id }: TodoPropType) => {
 
   return (
     <div
-      className={`flex flex-col  w-full py-5 px-5 my-3 rounded-2xl border-gray-200 items-center justify-between border-2 ${
+      className={`flex flex-col  w-full py-5 px-5 my-3 rounded-2xl border-gray-200 items-center justify-between border-2 group ${
         isCompleted && 'h-25 pb-3 pt-6 border-purple-300 bg-purple-100'
       }`}
     >
@@ -43,7 +43,7 @@ const Todo = ({ todoText, isCompleted, id }: TodoPropType) => {
           <p className={`text-gray-800  ${isCompleted && 'line-through text-slate-500'}`}>{todoText}</p>
 
           {/* delete icon */}
-          <button className="text-red-400 text-md" onClick={handleDelete}>
+          <button className="text-red-400 text-md group-hover:block hidden" onClick={handleDelete}>
             <FaRegTrashCan />
           </button>
         </div>
