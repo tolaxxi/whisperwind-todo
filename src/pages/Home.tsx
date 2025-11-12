@@ -12,6 +12,7 @@ const Home = () => {
       <Header />
       <Input />
       <ProgressCard />
+
       <section className="w-full">
         {todo.length > 0 ? (
           todo.map(({ id, todo, isCompleted }) => {
