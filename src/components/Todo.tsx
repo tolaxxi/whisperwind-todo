@@ -43,7 +43,7 @@ const Todo = ({ todoText, isCompleted, id }: TodoPropType) => {
           <p className={`text-gray-800  ${isCompleted && 'line-through text-slate-500'}`}>{todoText}</p>
 
           {/* delete icon */}
-          <button className="text-red-400 text-md group-hover:block hidden" onClick={handleDelete}>
+          <button className="text-red-300 text-md lg:group-hover:block lg:hidden text-sm" onClick={handleDelete}>
             <FaRegTrashCan />
           </button>
         </div>

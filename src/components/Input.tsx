@@ -16,7 +16,7 @@ const Input = () => {
   const [input, setInput] = useState('');
   const [currentPlaceholderText, setCurrentPlaceholderText] = useState(placeholders[0]);
 
-  const { todo, setTodo } = useTodo();
+  const { setTodo } = useTodo();
 
   //  handles  form submission
   function handleSubmit(e: React.FormEvent) {
@@ -59,7 +59,7 @@ const Input = () => {
       {/* todo input  */}
       <input
         type="text"
-        className="outline-none px-3 py-2 flex-1 "
+        className="outline-none pl-3 pr-2 py-2 flex-1 "
         placeholder={currentPlaceholderText}
         value={input}
         onChange={(e) => {
@@ -68,7 +68,7 @@ const Input = () => {
       />
 
       {/* add button */}
-      <button disabled={!input.trim()} className="bg-gradient px-3 py-2 rounded-md text-white ">
+      <button type="submit" disabled={!input.trim()} className="bg-gradient px-3 py-2 rounded-md text-white ">
         <BiPlus />
       </button>
     </form>

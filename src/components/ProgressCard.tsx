@@ -51,8 +51,8 @@ const ProgressCard = () => {
             <h2>Your Progress</h2>
           </span>
 
-          <h2 className="text-lg flex items-end">
-            <span className="text-purple-400 font-medium text-2xl">{completedTodoCount}</span>/{totalNumberOfTodos}
+          <h2 className=" flex items-end text-2xl font-medium text-gray-600">
+            <span className="text-purple-400 font-bold text-3xl">{completedTodoCount}</span>/{totalNumberOfTodos}
           </h2>
         </div>
         {/* progress bar */}
