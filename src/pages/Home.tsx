@@ -24,7 +24,7 @@ const Home = () => {
   }, [todoString]);
 
   return (
-    <main className="flex md:px-35 lg:px-70 flex-col items-center w-full h-dvh gap-10 px-8 sm:px-25">
+    <main className="flex md:px-35  lg:px-60 xl:px-82 flex-col items-center w-full h-dvh gap-10 px-8 sm:px-25">
       <Header />
       <Input />
       <ProgressCard />
