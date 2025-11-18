@@ -1,6 +1,21 @@
+import { useEffect, useState } from 'react';
 import { LuSparkles } from 'react-icons/lu';
 
 const Header = () => {
+  const [timeOfDay, setTimeOfDay] = useState('');
+
+  function getGreeting() {
+    const hour = new Date().getHours();
+
+    if (hour < 5) setTimeOfDay('Good evening');
+    if (hour < 12) setTimeOfDay('Good morning');
+    if (hour < 18) setTimeOfDay('Good afternoon');
+    setTimeOfDay('Good evening');
+  }
+
+  useEffect(() => {
+    getGreeting();
+  }, []);
   return (
     <section className="flex flex-col  gap-2 justify-center pt-10 w-full text-center items-center">
       <span className="flex w-full font-medium animate-bounce text-nowrap pr-4 items-center justify-center text-4xl bg-gradient text-transparent bg-clip-text ">
@@ -9,7 +24,7 @@ const Header = () => {
         <LuSparkles size={25} className="text-gradient-secondary " />
       </span>
       <div className="flex-col flex gap-2">
-        <h2 className="text-Secondary-Foreground font-medium text-xl w-full ">Good afternoon, lovely human!✨</h2>
+        <h2 className="text-Secondary-Foreground font-medium text-xl w-full ">{timeOfDay}, lovely human!✨</h2>
         <p className="text-gray-400 font-medium ">
           What small, beautiful things would you like to accomplish today? Remember: progress over perfection! 💖
         </p>
