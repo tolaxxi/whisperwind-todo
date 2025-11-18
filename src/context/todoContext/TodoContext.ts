@@ -11,7 +11,4 @@ export interface TodoContextType {
   setTodo: React.Dispatch<React.SetStateAction<TodoType[]>>;
 }
 
-export const TodoContext = createContext<TodoContextType>({
-  todo: [],
-  setTodo: () => {},
-});
+export const TodoContext = createContext<TodoContextType | null>(null);
