@@ -1,5 +1,5 @@
 import { useState, type ReactNode } from 'react';
-import { TodoContext, type TodoType } from './todoContext';
+import { TodoContext, type TodoType } from './TodoContext';
 
 interface TodoProviderPropsType {
   children: ReactNode;
