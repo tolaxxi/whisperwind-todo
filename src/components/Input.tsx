@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { BiPlus } from 'react-icons/bi';
 import { useTodo } from '../context/todoContext/useTodo';
-import type { TodoType } from '../context/todoContext/todoContext';
+import type { TodoType } from '../context/todoContext/TodoContext';
 
 const placeholders = [
   'Drink 8 glasses of water 💧',
